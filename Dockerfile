@@ -2,7 +2,7 @@
 FROM golang:1.12 as build-env
 
 ENV ROOT=vegeta-server
-RUN git clone --single-branch --branch customize-attack-id https://github.com/APMarte/vegeta-server.git 
+RUN git clone https://github.com/APMarte/vegeta-server.git 
 
 WORKDIR $ROOT
 RUN make build
